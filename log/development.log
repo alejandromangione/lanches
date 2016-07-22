@@ -1,0 +1,943 @@
+Started GET "/course/101" for ::1 at 2016-07-22 02:12:06 -0300
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.0) lib/active_record/migration.rb:572:in `check_pending!'
+activerecord (5.0.0) lib/active_record/migration.rb:548:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.5.2) lib/puma/configuration.rb:225:in `call'
+puma (3.5.2) lib/puma/server.rb:569:in `handle_request'
+puma (3.5.2) lib/puma/server.rb:406:in `process_client'
+puma (3.5.2) lib/puma/server.rb:271:in `block in run'
+puma (3.5.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.9ms)
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.3ms)
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160722050349)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar, "lastname" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160722050349"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateLabels (20160722050458)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "labels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160722050458"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateItems (20160722050755)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "price" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160722050755"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateOrders (20160722051152)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160722051152"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-07-22 05:12:29 UTC], ["updated_at", 2016-07-22 05:12:29 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_orders_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_orders_on_user_id' AND type='index'
+[0m
+Started GET "/order" for ::1 at 2016-07-22 02:13:23 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/order"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.5.2) lib/puma/configuration.rb:225:in `call'
+puma (3.5.2) lib/puma/server.rb:569:in `handle_request'
+puma (3.5.2) lib/puma/server.rb:406:in `process_client'
+puma (3.5.2) lib/puma/server.rb:271:in `block in run'
+puma (3.5.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [32 times] (20.0ms)
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.6ms)
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.4ms)
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (144.2ms)
+Started GET "/orders" for ::1 at 2016-07-22 02:13:27 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 896ms (Views: 885.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/orders/new" for ::1 at 2016-07-22 02:13:30 -0300
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (7.7ms)
+  Rendered orders/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 68ms (Views: 61.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2016-07-22 02:13:41 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 44ms (Views: 39.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for ::1 at 2016-07-22 02:13:43 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.6ms)
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 59ms (Views: 49.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for ::1 at 2016-07-22 02:13:53 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6yIB4lRMSiXfF4IxrrmkUdhFcVUNe5lL+GrCICEG9jpfrIJhPMi5K6rIP6XoZ0VskP5EAknysac+QFza+3004g==", "user"=>{"firstname"=>"Alejandro", "lastname"=>"Mangione"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["firstname", "Alejandro"], ["lastname", "Mangione"], ["created_at", 2016-07-22 05:13:53 UTC], ["updated_at", 2016-07-22 05:13:53 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 8ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/users/1" for ::1 at 2016-07-22 02:13:53 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 30ms (Views: 24.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for ::1 at 2016-07-22 02:13:59 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2016-07-22 02:14:04 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.6ms)
+  Rendered users/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders" for ::1 at 2016-07-22 02:14:10 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/orders/new" for ::1 at 2016-07-22 02:14:12 -0300
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (2.1ms)
+  Rendered orders/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/orders" for ::1 at 2016-07-22 02:15:13 -0300
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fMgmZWgBFv6uBQurRGA5zfPoLxn/edVTAQjlj9Bu+tkfnl3sulmKTo1LHmixBDVl6t033aonrt8015+rYsUv8Q==", "order"=>{"user_id"=>"Alejandro Mangione"}, "commit"=>"Create Order"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (2.4ms)
+  Rendered orders/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 73ms (Views: 52.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/orders" for ::1 at 2016-07-22 02:15:18 -0300
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gBlsgQCetD7L/BV8PpWMppjJBkonmVGsSG70bQ2vMVozDjTzPcZHj9lIW9tMULrvYgNKs9eseiiqdCnxFCSZjQ==", "order"=>{"user_id"=>"1"}, "commit"=>"Create Order"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 1], ["created_at", 2016-07-22 05:15:18 UTC], ["updated_at", 2016-07-22 05:15:18 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/orders/1
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/orders/1" for ::1 at 2016-07-22 02:15:18 -0300
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered orders/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders" for ::1 at 2016-07-22 02:15:30 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered orders/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders/1/edit" for ::1 at 2016-07-22 02:15:33 -0300
+Processing by OrdersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/edit.html.erb within layouts/application
+  Rendered orders/_form.html.erb (2.1ms)
+  Rendered orders/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for ::1 at 2016-07-22 02:15:36 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered orders/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders/1" for ::1 at 2016-07-22 02:15:39 -0300
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered orders/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for ::1 at 2016-07-22 02:15:41 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered orders/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-22 02:19:03 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered orders/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 100ms (Views: 86.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2016-07-22 02:19:15 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered orders/index.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 327ms (Views: 309.6ms | ActiveRecord: 1.2ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateJoinTable (20160722052855)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "items_orders" ("order_id" integer NOT NULL, "item_id" integer NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_items_orders_on_order_id_and_item_id" ON "items_orders" ("order_id", "item_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_items_orders_on_order_id_and_item_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_items_orders_on_order_id_and_item_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_items_orders_on_item_id_and_order_id" ON "items_orders" ("item_id", "order_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160722052855"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_items_orders_on_item_id_and_order_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_items_orders_on_item_id_and_order_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_items_orders_on_order_id_and_item_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_items_orders_on_order_id_and_item_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_orders_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_orders_on_user_id' AND type='index'
+[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 1], ["created_at", 2016-07-22 05:35:01 UTC], ["updated_at", 2016-07-22 05:35:01 UTC]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("description", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "Palmito"], ["price", 3.0], ["created_at", 2016-07-22 05:35:01 UTC], ["updated_at", 2016-07-22 05:35:01 UTC]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "items_orders" ("order_id", "item_id") VALUES (?, ?)[0m  [["order_id", 2], ["item_id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2016-07-22 02:35:29 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered orders/index.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 317ms (Views: 292.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/orders/2" for ::1 at 2016-07-22 02:35:36 -0300
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered orders/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 34ms (Views: 28.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-07-22 02:38:24 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/index.html.erb within layouts/application (65.5ms)
+Completed 200 OK in 118ms (Views: 114.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2016-07-22 02:39:52 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/index.html.erb within layouts/application (94.0ms)
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `e' for #<#<Class:0x007ff4d5a33de8>:0x007ff4dc3712b0>):
+    16:         <td><%= order.user %></td>
+    17:         <td>
+    18:           <% order.items.each do |i| %>
+    19:           <%= e.description  %>
+    20:           <% end %>
+    21:          </td>
+    22:         <td><%= link_to 'Show', order %></td>
+  
+app/views/orders/index.html.erb:19:in `block (2 levels) in _app_views_orders_index_html_erb___739391657960720709_70344821673540'
+app/views/orders/index.html.erb:18:in `block in _app_views_orders_index_html_erb___739391657960720709_70344821673540'
+app/views/orders/index.html.erb:14:in `_app_views_orders_index_html_erb___739391657960720709_70344821673540'
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.3ms)
+Started GET "/" for ::1 at 2016-07-22 02:40:00 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/orders/2/edit" for ::1 at 2016-07-22 02:40:18 -0300
+Processing by OrdersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering orders/edit.html.erb within layouts/application
+  Rendered orders/_form.html.erb (28.3ms)
+  Rendered orders/edit.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 63ms (Views: 60.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/new" for ::1 at 2016-07-22 02:40:38 -0300
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (2.0ms)
+  Rendered orders/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 30ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders/2" for ::1 at 2016-07-22 02:40:49 -0300
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered orders/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 1]]
+Started GET "/" for ::1 at 2016-07-22 02:48:00 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/orders/2/edit" for ::1 at 2016-07-22 02:48:03 -0300
+Processing by OrdersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering orders/edit.html.erb within layouts/application
+  Rendered orders/_form.html.erb (12.5ms)
+  Rendered orders/edit.html.erb within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass
+Did you mean?  tap):
+    19:   <div class="field">
+    20:       <%= f.label 'items' %>
+    21:     <%= select_tag 'items',
+    22:         options_for_select( @items.map { |i| [i.description,i.id] }, order.items.map { |i| i.id } ), include_blank: true, prompt: 'Escolha uma opção', multiple: true %>
+    23:   </div>
+    24: 
+    25:   <div class="actions">
+  
+app/views/orders/_form.html.erb:22:in `block in _app_views_orders__form_html_erb__755274435479464242_70344830420640'
+app/views/orders/_form.html.erb:1:in `_app_views_orders__form_html_erb__755274435479464242_70344830420640'
+app/views/orders/edit.html.erb:3:in `_app_views_orders_edit_html_erb___3585750706019400844_70344830406000'
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (71.7ms)
+Started GET "/orders/2/edit" for ::1 at 2016-07-22 02:49:14 -0300
+Processing by OrdersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering orders/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/_form.html.erb (16.3ms)
+  Rendered orders/edit.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 75ms (Views: 57.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/orders" for ::1 at 2016-07-22 02:49:26 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 43ms (Views: 39.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/orders/1/edit" for ::1 at 2016-07-22 02:49:29 -0300
+Processing by OrdersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 1]]
+  Rendered orders/_form.html.erb (4.9ms)
+  Rendered orders/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/orders/1" for ::1 at 2016-07-22 02:49:32 -0300
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered orders/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 27.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for ::1 at 2016-07-22 02:49:40 -0300
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items/new" for ::1 at 2016-07-22 02:49:43 -0300
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_form.html.erb (2.7ms)
+  Rendered items/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/items" for ::1 at 2016-07-22 02:49:54 -0300
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AYfjoVmqLxIQorD7Vr+40Bgh2MSpaJGzTIYNuNq4lGwnapnXsoDSNG4WuvPDSLdiW3YaG8FPTJ1cwUugV4+nxg==", "item"=>{"description"=>"Frango", "price"=>"3.00"}, "commit"=>"Create Item"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("description", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "Frango"], ["price", 3.0], ["created_at", 2016-07-22 05:49:54 UTC], ["updated_at", 2016-07-22 05:49:54 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/items/2
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/items/2" for ::1 at 2016-07-22 02:49:54 -0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for ::1 at 2016-07-22 02:49:56 -0300
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/orders" for ::1 at 2016-07-22 02:50:07 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders/1/edit" for ::1 at 2016-07-22 02:50:13 -0300
+Processing by OrdersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 1]]
+  Rendered orders/_form.html.erb (5.7ms)
+  Rendered orders/edit.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 37ms (Views: 33.5ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items_orders" ("order_id", "item_id") VALUES (?, ?)[0m  [["order_id", 1], ["item_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items_orders" ("order_id", "item_id") VALUES (?, ?)[0m  [["order_id", 1], ["item_id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/orders/1/edit" for ::1 at 2016-07-22 02:53:23 -0300
+Processing by OrdersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 1]]
+  Rendered orders/_form.html.erb (4.4ms)
+  Rendered orders/edit.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 41ms (Views: 37.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders/" for ::1 at 2016-07-22 02:53:26 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 30ms (Views: 27.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders/2/edit" for ::1 at 2016-07-22 02:54:49 -0300
+Processing by OrdersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering orders/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/_form.html.erb (4.9ms)
+  Rendered orders/edit.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/orders/2" for ::1 at 2016-07-22 02:54:51 -0300
+Processing by OrdersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sBXBqwtvN7FoVqZcq5+WF0npCgiGiDbVlKfKAI8ugJsa8c99btdzn5Sqbhu2kb0U9le+vX5DCj3KfZ4TiQttaA==", "order"=>{"user_id"=>"1"}, "items"=>["2"], "commit"=>"Update Order", "id"=>"2"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/orders/2
+Completed 302 Found in 12ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/orders/2" for ::1 at 2016-07-22 02:54:51 -0300
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered orders/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/2/edit" for ::1 at 2016-07-22 02:54:53 -0300
+Processing by OrdersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering orders/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/_form.html.erb (4.5ms)
+  Rendered orders/edit.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders" for ::1 at 2016-07-22 02:54:56 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 37ms (Views: 33.4ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateJoinTableLabel (20160722055725)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "labels_orders" ("order_id" integer NOT NULL, "label_id" integer NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160722055725"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_items_orders_on_item_id_and_order_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_items_orders_on_item_id_and_order_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_items_orders_on_order_id_and_item_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_items_orders_on_order_id_and_item_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_orders_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_orders_on_user_id' AND type='index'
+[0m
+Started GET "/labels" for ::1 at 2016-07-22 02:59:26 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LabelsController#index as HTML
+  Rendering labels/index.html.erb within layouts/application
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels"[0m
+  Rendered labels/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 259ms (Views: 244.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/labels/new" for ::1 at 2016-07-22 02:59:28 -0300
+Processing by LabelsController#new as HTML
+  Rendering labels/new.html.erb within layouts/application
+  Rendered labels/_form.html.erb (47.5ms)
+  Rendered labels/new.html.erb within layouts/application (49.8ms)
+Completed 200 OK in 84ms (Views: 75.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/labels" for ::1 at 2016-07-22 02:59:32 -0300
+Processing by LabelsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SIGEDx1/I8/Wubyfu0fpFrWgFNu4az0t9QEjH1ZNTml64dZeDZhXYQ5d8dy/gC/1vZDwB70+pRDAQsqYWRM/Kw==", "label"=>{"title"=>"Entrege"}, "commit"=>"Create Label"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "labels" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Entrege"], ["created_at", 2016-07-22 05:59:32 UTC], ["updated_at", 2016-07-22 05:59:32 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/labels/1
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/labels/1" for ::1 at 2016-07-22 02:59:32 -0300
+Processing by LabelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering labels/show.html.erb within layouts/application
+  Rendered labels/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 33.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/labels" for ::1 at 2016-07-22 02:59:35 -0300
+Processing by LabelsController#index as HTML
+  Rendering labels/index.html.erb within layouts/application
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels"[0m
+  Rendered labels/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 54ms (Views: 51.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/labels/new" for ::1 at 2016-07-22 02:59:37 -0300
+Processing by LabelsController#new as HTML
+  Rendering labels/new.html.erb within layouts/application
+  Rendered labels/_form.html.erb (2.4ms)
+  Rendered labels/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/labels" for ::1 at 2016-07-22 02:59:45 -0300
+Processing by LabelsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0AfoqhfBkcHm24vzJBoRYTJ2/G5IKLTHsGPdfSRyKFniZ7r7Byblbz4/xrAg3deCOkYYsk19LPqFIDT6KyxZGw==", "label"=>{"title"=>"Pago"}, "commit"=>"Create Label"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "labels" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Pago"], ["created_at", 2016-07-22 05:59:45 UTC], ["updated_at", 2016-07-22 05:59:45 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/labels/2
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/labels/2" for ::1 at 2016-07-22 02:59:45 -0300
+Processing by LabelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering labels/show.html.erb within layouts/application
+  Rendered labels/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/labels" for ::1 at 2016-07-22 02:59:47 -0300
+Processing by LabelsController#index as HTML
+  Rendering labels/index.html.erb within layouts/application
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels"[0m
+  Rendered labels/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/labels/new" for ::1 at 2016-07-22 02:59:50 -0300
+Processing by LabelsController#new as HTML
+  Rendering labels/new.html.erb within layouts/application
+  Rendered labels/_form.html.erb (2.4ms)
+  Rendered labels/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/labels" for ::1 at 2016-07-22 02:59:59 -0300
+Processing by LabelsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yNp8pMf6tjM/MIPGobo/0/TgcuiyXbbFBjUT/Ec7+o/6ui711x3CnefUzoWlffkw/NCWNLcILvgzdvp7SGWLzQ==", "label"=>{"title"=>"Reservado"}, "commit"=>"Create Label"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "labels" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Reservado"], ["created_at", 2016-07-22 05:59:59 UTC], ["updated_at", 2016-07-22 05:59:59 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/labels/3
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/labels/3" for ::1 at 2016-07-22 02:59:59 -0300
+Processing by LabelsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering labels/show.html.erb within layouts/application
+  Rendered labels/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/labels" for ::1 at 2016-07-22 03:00:00 -0300
+Processing by LabelsController#index as HTML
+  Rendering labels/index.html.erb within layouts/application
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels"[0m
+  Rendered labels/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for ::1 at 2016-07-22 03:00:10 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/index.html.erb within layouts/application (56.7ms)
+Completed 200 OK in 93ms (Views: 79.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/orders" for ::1 at 2016-07-22 03:01:42 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "labels_orders" ON "labels"."id" = "labels_orders"."label_id" WHERE "labels_orders"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 2]]
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "labels_orders" ON "labels"."id" = "labels_orders"."label_id" WHERE "labels_orders"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/index.html.erb within layouts/application (86.9ms)
+Completed 200 OK in 327ms (Views: 301.6ms | ActiveRecord: 3.4ms)
+
+
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" ORDER BY "labels"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "labels_orders" ("order_id", "label_id") VALUES (?, ?)[0m  [["order_id", 1], ["label_id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "labels_orders" ON "labels"."id" = "labels_orders"."label_id" WHERE "labels_orders"."order_id" = ?[0m  [["order_id", 1]]
+Started GET "/orders" for ::1 at 2016-07-22 03:02:34 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "labels_orders" ON "labels"."id" = "labels_orders"."label_id" WHERE "labels_orders"."order_id" = ?[0m  [["order_id", 1]]
+  Rendered orders/index.html.erb within layouts/application (20.0ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `description' for #<Label:0x007fedbac11ba0>):
+    21:        </td>
+    22:         <td>
+    23:           <% order.labels.each do |i| %>
+    24:           <%= i.description  %>
+    25:           <% end %>
+    26:        </td>
+    27:         <td><%= link_to 'Show', order %></td>
+  
+app/views/orders/index.html.erb:24:in `block (2 levels) in _app_views_orders_index_html_erb___2099091139958227077_70329520220280'
+app/views/orders/index.html.erb:23:in `block in _app_views_orders_index_html_erb___2099091139958227077_70329520220280'
+app/views/orders/index.html.erb:14:in `_app_views_orders_index_html_erb___2099091139958227077_70329520220280'
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.5ms)
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (86.7ms)
+Started GET "/orders" for ::1 at 2016-07-22 03:02:50 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "labels_orders" ON "labels"."id" = "labels_orders"."label_id" WHERE "labels_orders"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = ?[0m  [["order_id", 2]]
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "labels_orders" ON "labels"."id" = "labels_orders"."label_id" WHERE "labels_orders"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.8ms)
+
+
