@@ -1,4 +1,4 @@
-class CreateJoinTable < ActiveRecord::Migration[5.0]
+class CreateJoinTableItem < ActiveRecord::Migration[5.0]
   def change
     create_join_table :orders, :items do |t|
       t.index [:order_id, :item_id]

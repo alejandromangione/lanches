@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20160722055725) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "items", force: :cascade do |t|
     t.string   "description"
     t.float    "price"
@@ -22,8 +25,8 @@ ActiveRecord::Schema.define(version: 20160722055725) do
   create_table "items_orders", id: false, force: :cascade do |t|
     t.integer "order_id", null: false
     t.integer "item_id",  null: false
-    t.index ["item_id", "order_id"], name: "index_items_orders_on_item_id_and_order_id"
-    t.index ["order_id", "item_id"], name: "index_items_orders_on_order_id_and_item_id"
+    t.index ["item_id", "order_id"], name: "index_items_orders_on_item_id_and_order_id", using: :btree
+    t.index ["order_id", "item_id"], name: "index_items_orders_on_order_id_and_item_id", using: :btree
   end
 
   create_table "labels", force: :cascade do |t|
@@ -35,13 +38,15 @@ ActiveRecord::Schema.define(version: 20160722055725) do
   create_table "labels_orders", id: false, force: :cascade do |t|
     t.integer "order_id", null: false
     t.integer "label_id", null: false
+    t.index ["label_id", "order_id"], name: "index_labels_orders_on_label_id_and_order_id", using: :btree
+    t.index ["order_id", "label_id"], name: "index_labels_orders_on_order_id_and_label_id", using: :btree
   end
 
   create_table "orders", force: :cascade do |t|
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_orders_on_user_id"
+    t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -51,4 +56,5 @@ ActiveRecord::Schema.define(version: 20160722055725) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "orders", "users"
 end
