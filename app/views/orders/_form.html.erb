@@ -11,15 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field user">
     <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
+    <%= f.select :user_id, 
+        options_for_select( @users.map { |u| [u.fullname,u.id] }, order.user.try(:id) ), include_blank: true 
+    %>
+  </div>
+
+  <div class="field items">
+     <%= f.label :item_ids %>
+     <ul>  
+       <% order.items.each do |item| %>
+        <%= f.hidden_field :item_ids, id: "", multiple: true, value: item.id %>
+        <%= content_tag(:li, item.description, class: "item-#{item.id}" ) %>
+       <% end %>
+     </ul>
   </div>
 
   <div class="field">
-      <%= f.label 'items' %>
-    <%= select_tag 'items',
-        options_for_select( @items.map { |i| [i.description,i.id] }, order.items.map { |i| i.id } ), include_blank: true, prompt: 'Escolha uma opção', multiple: true %>
+    <%= select_tag :item, options_for_select( @items.map { |i| [i.description,i.id] }, order.items.map { |i| i.id } ), include_blank: false, prompt: 'Escolha uma opção' %>
+    <%= button_tag "+", type: 'button', id: 'add-item' %>
+    <%= button_tag "-", type: 'button', id: 'remove-item' %>
   </div>
 
   <div class="actions">
