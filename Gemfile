@@ -19,9 +19,13 @@ gem 'coffee-rails'
 
 gem 'jquery-rails'
 
-gem 'turbolinks', '~> 5'
+# gem 'turbolinks', '~> 5'
 
 gem 'jbuilder', '~> 2.5'
+
+# gem 'material_design_lite-rails'
+
+gem 'rails-assets-material-design-lite', source: 'https://rails-assets.org'
 
 group :development, :test do
   

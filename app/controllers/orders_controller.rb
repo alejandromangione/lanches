@@ -23,12 +23,14 @@ class OrdersController < ApplicationController
     @order = Order.new
     @items = Item.all
     @users = User.all
+    @labels = Label.all
   end
 
   # GET /orders/1/edit
   def edit
     @items = Item.all
     @users = User.all
+    @labels = Label.all
   end
 
   # POST /orders
@@ -37,7 +39,7 @@ class OrdersController < ApplicationController
     @order = Order.new(order_user_params)
 
     respond_to do |format|
-      if @order.save && order_update_items
+      if @order.save && order_update_items && order_update_labels
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
         format.json { render :show, status: :created, location: @order }
       else
@@ -51,7 +53,7 @@ class OrdersController < ApplicationController
   # PATCH/PUT /orders/1.json
   def update
     respond_to do |format|
-      if @order.update(order_user_params) && order_update_items
+      if @order.update(order_user_params) && order_update_items && order_update_labels
         format.html { redirect_to orders_url, notice: 'Order was successfully updated.' }
         format.json { render :show, status: :ok, location: @order }
       else
@@ -87,6 +89,13 @@ class OrdersController < ApplicationController
       @order.items = []
       params.require(:order).require(:item_ids).each do |i|
         @order.items.push(Item.find_by(id: i))
+      end
+    end
+
+    def order_update_labels
+      @order.labels = []
+      params.require(:order).require(:label_ids).each do |i|
+        @order.labels.push(Label.find_by(id: i))
       end
     end
 

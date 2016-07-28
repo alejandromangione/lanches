@@ -34,6 +34,26 @@
     <%= button_tag "-", type: 'button', id: 'remove-item' %>
   </div>
 
+  <hr>
+
+  <div class="field labels">
+     <%= f.label :label_ids %>
+     <ul>  
+       <% order.labels.each do |label| %>
+        <%= f.hidden_field :label_ids, id: "", multiple: true, value: label.id %>
+        <%= content_tag(:li, label.title, class: "label-#{label.id}" ) %>
+       <% end %>
+     </ul>
+  </div>
+
+  <div class="field">
+    <%= select_tag :label, options_for_select( @labels.map { |i| [i.title,i.id] }, order.labels.map { |i| i.id } ), include_blank: false, prompt: 'Escolha uma opção' %>
+    <%= button_tag "+", type: 'button', id: 'add-label' %>
+    <%= button_tag "-", type: 'button', id: 'remove-label' %>
+  </div>
+
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

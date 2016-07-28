@@ -4,14 +4,34 @@
     <title>Lanches</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%= stylesheet_link_tag "//fonts.googleapis.com/icon?family=Material+Icons" %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
+  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
 
-    <div class="container">
-      <%= yield %>
+    <div class="mdl-layout__container has-scrolling-header">
+
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+        <%= render 'layouts/header' %>
+
+        <main class="mdl-layout__content">
+
+          <div class="mdl-layout__tab-panel is-active">
+
+              <%= yield %>
+
+          </div>
+
+        </main>
+
+      </div>
     </div>
+
   </body>
 </html>

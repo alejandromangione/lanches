@@ -1,39 +1,60 @@
+
+
+     
+      
 <p id="notice"><%= notice %></p>
 
-<h1>Orders</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Data</th>
-      <th>Cliente</th>
-      <th colspan="5"></th>
-    </tr>
-  </thead>
+<% @orders.each do |order| %>
 
-  <tbody>
-    <% @orders.each do |order| %>
-      <tr>
-        <td><%= order.created_at %></td>
-        <td><%= order.user.fullname %></td>
-        <td>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+
+<div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__supporting-text">
+
+    <h6><%= order.created_at %></h6>
+
+    <h4><%= order.user.fullname %></h4>
+        
+    <div class="mdl-grid">
+      
+      <div class="mdl-cell mdl-cell--6-col">
+        <ul>
           <% order.items.each do |i| %>
-          <%= i.description  %>
+            <li><%= i.description  %></li> 
           <% end %>
-       </td>
-        <td>
+        </ul>
+      </div>
+
+      <div class="mdl-cell mdl-cell--6-col">
+        <ul>
           <% order.labels.each do |i| %>
-          <%= i.title  %>
+            <li><%= i.title  %></li>
           <% end %>
-       </td>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+       </ul>        
+      </div>
+
+    </div>
+
+
+     <div class="mdl-card__actions">
+      <%= link_to 'Show', order, class: 'mdl-button' %>
+      <%= link_to 'Edit', edit_order_path(order), class: 'mdl-button' %>
+      <%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' }, class: 'mdl-button' %>
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+<% end %>
 
 <br>
 
 <%= link_to 'New Order', new_order_path %>
+
+               
+
+
+

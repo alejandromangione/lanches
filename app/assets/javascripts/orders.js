@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function() {
+$(document).ready(function(){
 
   $('#add-item').click(function(){
 
@@ -15,6 +15,25 @@ $(document).on('turbolinks:load', function() {
     var id = $("#item").val();
 
     Item.rem(id);
+
+  });
+
+
+ $('#add-label').click(function(){
+
+    var id = $("#label").val();
+    var name = $( "#label option:selected" ).text();
+
+    Label.add(id, name);
+
+
+  });
+
+  $('#remove-label').click(function(){
+
+    var id = $("#label").val();
+
+    Label.rem(id);
 
   });
 

@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  before_filter :check_auth
+  before_filter :check_auth unless Rails.env.development?
 
   def check_auth
     authenticate_or_request_with_http_basic do |username,password|
