@@ -11629,3 +11629,515 @@ Processing by OrdersController#index as HTML
 Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 1.1ms)
 
 
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/orders?date=2016-07-28" for ::1 at 2016-07-28 23:05:52 -0300
+Processing by OrdersController#index as HTML
+  Parameters: {"date"=>"2016-07-28"}
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE (created_at >= '2016-07-28 00:00:00') LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = $1[0m  [["order_id", 2]]
+  [1m[36mLabel Load (0.4ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "labels_orders" ON "labels"."id" = "labels_orders"."label_id" WHERE "labels_orders"."order_id" = $1[0m  [["order_id", 2]]
+  Rendered orders/index.html.erb within layouts/application (47.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 205ms (Views: 191.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/orders" for ::1 at 2016-07-29 03:09:19 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE (created_at >= '2016-07-28 00:00:00') LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "items_orders" ON "items"."id" = "items_orders"."item_id" WHERE "items_orders"."order_id" = $1[0m  [["order_id", 2]]
+  [1m[36mLabel Load (0.3ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "labels_orders" ON "labels"."id" = "labels_orders"."label_id" WHERE "labels_orders"."order_id" = $1[0m  [["order_id", 2]]
+  Rendered orders/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 56ms (Views: 51.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users" for ::1 at 2016-07-29 03:09:22 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2016-07-29 03:11:20 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2016-07-29 03:11:39 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2016-07-29 03:13:54 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2016-07-29 03:15:57 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 91ms (Views: 88.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2016-07-29 03:17:03 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2016-07-29 03:17:07 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 41ms (Views: 35.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2016-07-29 03:17:33 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2016-07-29 03:20:47 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2016-07-29 03:21:33 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2016-07-29 03:22:55 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 44ms (Views: 41.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2016-07-29 03:27:38 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2016-07-29 03:29:19 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 126ms (Views: 124.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:29:34 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (15.0ms)
+  Rendered users/edit.html.erb within layouts/application (17.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 48ms (Views: 44.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:30:31 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.3ms)
+  Rendered users/edit.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:32:28 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.2ms)
+  Rendered users/edit.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:32:57 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered users/edit.html.erb within layouts/application (11.8ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/alejandro.mangione/Documents/Project/lanches/app/views/users/_form.html.erb:25: syntax error, unexpected tLABEL, expecting '='
+...uffer.append=( f.submit, class: 'mdl-button mdl-js-button md...
+...                               ^):
+  
+app/views/users/_form.html.erb:25: syntax error, unexpected tLABEL, expecting '='
+app/views/users/edit.html.erb:10:in `_app_views_users_edit_html_erb__2445379124822912268_70189809543580'
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.7ms)
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:33:45 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered users/edit.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/Users/alejandro.mangione/Documents/Project/lanches/app/views/users/_form.html.erb:25: syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+...t_buffer.append=( f.submit, "", class: 'mdl-button mdl-js-bu...
+...                               ^):
+  
+app/views/users/_form.html.erb:25: syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+app/views/users/edit.html.erb:10:in `_app_views_users_edit_html_erb__2445379124822912268_70189795174860'
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.1ms)
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:33:59 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/edit.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:34:26 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.1ms)
+  Rendered users/edit.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:36:47 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.3ms)
+  Rendered users/edit.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:37:09 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.8ms)
+  Rendered users/edit.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:37:31 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.8ms)
+  Rendered users/edit.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:40:15 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.6ms)
+  Rendered users/edit.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for ::1 at 2016-07-29 03:40:56 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2016-07-29 03:41:01 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.1ms)
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2016-07-29 03:41:12 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:41:16 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.6ms)
+  Rendered users/edit.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:43:54 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.2ms)
+  Rendered users/edit.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:46:41 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (12.7ms)
+  Rendered users/edit.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 121ms (Views: 107.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:46:54 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.4ms)
+  Rendered users/edit.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:48:54 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.9ms)
+  Rendered users/edit.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:49:51 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.1ms)
+  Rendered users/edit.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 64ms (Views: 62.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:50:27 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.8ms)
+  Rendered users/edit.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:50:30 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.5ms)
+  Rendered users/edit.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:50:34 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.2ms)
+  Rendered users/edit.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:50:55 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.5ms)
+  Rendered users/edit.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/alejandro.mangione/Documents/Project/lanches/app/views/users/_form.html.erb:38: syntax error, unexpected keyword_class, expecting ')'
+...fer.append=( f.submit ">" class: 'mdl-button mdl-js-button m...
+...                               ^):
+  
+app/views/users/_form.html.erb:38: syntax error, unexpected keyword_class, expecting ')'
+app/views/users/edit.html.erb:10:in `_app_views_users_edit_html_erb__2445379124822912268_70189801340000'
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/alejandro.mangione/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.7ms)
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:51:46 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.3ms)
+  Rendered users/edit.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2016-07-29 03:52:21 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2016-07-29 03:53:12 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 162ms (Views: 159.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2016-07-29 03:53:18 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2016-07-29 03:53:21 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-07-29 03:53:23 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.9ms)
+  Rendered users/edit.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for ::1 at 2016-07-29 03:53:38 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.4ms)
+
+

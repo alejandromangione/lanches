@@ -19,7 +19,7 @@
     <div class="mdl-grid">
       
       <div class="mdl-cell mdl-cell--6-col">
-        <ul>
+        <ul class="mdl-list">
           <% order.items.each do |i| %>
             <li><%= i.description  %></li> 
           <% end %>
@@ -27,7 +27,7 @@
       </div>
 
       <div class="mdl-cell mdl-cell--6-col">
-        <ul>
+        <ul class="mdl-list">
           <% order.labels.each do |i| %>
             <li><%= i.title  %></li>
           <% end %>

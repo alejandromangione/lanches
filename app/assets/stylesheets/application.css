@@ -12,6 +12,7 @@
  *
  *= require material-design-lite
  *= require layout/main
+ *= require module/table
  *= require_tree .
  *= require_self
  */
