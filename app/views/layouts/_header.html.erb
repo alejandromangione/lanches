@@ -5,7 +5,7 @@
     <div class="mdl-layout-spacer"></div>
 
       <nav class="mdl-navigation">
-        <%= link_to "Filter Today", "#{orders_path}?#{Date.today.to_s}", class: 'mdl-navigation__link' %>
+        <%= link_to "Filter Today", "#{orders_path}?date=#{Date.today.to_s}", class: 'mdl-navigation__link' %>
       </nav>
 
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
