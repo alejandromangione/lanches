@@ -100,6 +100,6 @@ class OrdersController < ApplicationController
     end
 
     def filter_date
-      session[:filter_date] = params.try(:[], :date)
+      session[:filter_date] = params[:date] if params[:date].present?
     end
 end
