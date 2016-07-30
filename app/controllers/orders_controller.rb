@@ -6,7 +6,7 @@ class OrdersController < ApplicationController
   def index
 
     if session[:filter_date].present?
-      @orders = Order.all.by_date(session[:filter_date]).limit(1)
+      @orders = Order.all.by_date(session[:filter_date]).limit(10)
     else
       @orders = Order.all.limit(10)
     end
